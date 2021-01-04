@@ -129,14 +129,14 @@ paths:
           description: The request is unauthorized.
           schema:
             $ref: '#/definitions/Error'
-        '404':
-          description: The requested access URL wasn't found
-          schema:
-            $ref: '#/definitions/Error'
         '403':
           description: |
             The requester is not authorized to perform this action.
             Authorization was sent and understood but was insufficient.
+          schema:
+            $ref: '#/definitions/Error'
+        '404':
+          description: The requested access URL wasn't found
           schema:
             $ref: '#/definitions/Error'
         '500':
