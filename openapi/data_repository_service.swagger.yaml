@@ -134,7 +134,9 @@ paths:
           schema:
             $ref: '#/definitions/Error'
         '403':
-          description: The requester is not authorized to perform this action.
+          description: |
+            The requester is not authorized to perform this action.
+            Authorization was sent and understood but was insufficient.
           schema:
             $ref: '#/definitions/Error'
         '500':
