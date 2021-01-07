@@ -353,6 +353,25 @@ definitions:
           Name of the region in the cloud service provider that the object belongs to.
         example:
           us-east-1
+      provider:
+        type: string
+        description: >-
+          The cloud service provider. This provided the explicit scope of the
+          `region` field.
+        enum:
+          - s3
+          - gs
+      region_locked:
+        type: boolean
+        description: >-
+          The URL can only be used from inside the region as specified by the
+          `provider` and `region` fields.
+      payment_required:
+        type: boolean
+        description: >-
+          The cloud service provider requires payment to access this URL. The
+          user-agent will need to provide whatever billing credentials the
+          provider requires.
   Error:
     description:
       An object that can optionally include information about the error.
